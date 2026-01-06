@@ -296,11 +296,11 @@ MonoBehaviour:
   _udonSharpBackingUdonBehaviour: {fileID: 631180863}
   poolRoot: {fileID: 631180865}
   nozzlePositionU: {x: 0, y: 0, z: 0}
-  nozzleDirectionU: {x: 0, y: 0, z: 1}
-  emitRate: 2000
+  nozzleDirectionU: {x: 1, y: 0, z: 0}
+  emitRate: 10
   v0_ms: 30000000
   lifeTime_s: 0.3
-  metersToUnity: 0.001
+  metersToUnity: 0.000001
   paused: 0
   maxSubSteps: 8
   fixedDt_s: 0
@@ -315,9 +315,9 @@ Transform:
   m_GameObject: {fileID: 631180862}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2547036, y: 6.1244445, z: -0.23973602}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1354445474}
   m_Father: {fileID: 0}
@@ -516,7 +516,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a775e19894a0448259bd24aa052e30e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -870,6 +870,14 @@ MonoBehaviour:
     ID: 10
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 631180862}
+    ID: 11
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 1354445473}
+    ID: 12
+    SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
