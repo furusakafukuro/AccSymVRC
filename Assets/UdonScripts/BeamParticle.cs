@@ -59,8 +59,8 @@ public class BeamParticle : UdonSharpBehaviour
         positionU += velocityU * dt;
         ApplyTransform();
         BillboardToLocalPlayer();
-        UnityEngine.Debug.Log($"dt = {dt}");
-        UnityEngine.Debug.Log("BeamParticle StepKinematic: pos=" + positionU.ToString("F3"));
+        // UnityEngine.Debug.Log($"dt = {dt}");
+        // UnityEngine.Debug.Log("BeamParticle StepKinematic: pos=" + positionU.ToString("F3"));
     }
 
     public void StepWithAcceleration(float dt, Vector3 accelU)

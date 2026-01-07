@@ -83,8 +83,8 @@ public class ElectronBeamEmitter : UdonSharpBehaviour
         if (paused) return;
         if (particles == null || poolCount == 0) return;
 
-    UnityEngine.Debug.Log("FixedUpdate running");
-    
+    // UnityEngine.Debug.Log("FixedUpdate running");
+
         float dtFrame = Time.fixedDeltaTime;
         float dtBase = (fixedDt_s > 0f) ? fixedDt_s : dtFrame;
 
