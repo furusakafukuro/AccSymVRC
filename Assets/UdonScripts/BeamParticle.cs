@@ -1,4 +1,5 @@
-﻿using UdonSharp;
+﻿using System.Diagnostics;
+using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
@@ -58,6 +59,8 @@ public class BeamParticle : UdonSharpBehaviour
         positionU += velocityU * dt;
         ApplyTransform();
         BillboardToLocalPlayer();
+        UnityEngine.Debug.Log($"dt = {dt}");
+        UnityEngine.Debug.Log("BeamParticle StepKinematic: pos=" + positionU.ToString("F3"));
     }
 
     public void StepWithAcceleration(float dt, Vector3 accelU)
@@ -91,7 +94,7 @@ public class BeamParticle : UdonSharpBehaviour
         Vector3 headPos = td.position;
         Vector3 worldPos = tr.position;
 
-        Vector3 dir = headPos - worldPos;
+        Vector3 dir = - headPos + worldPos;
         if (dir.sqrMagnitude < 1e-12f) return;
 
         tr.rotation = Quaternion.LookRotation(dir.normalized, Vector3.up);
